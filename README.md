@@ -1,17 +1,18 @@
-ECommerce API
+# ECommerce API
 
-A modern .NET 9 Web API for e-commerce scenarios, organized with Onion Architecture to keep domain rules at the center and infrastructure concerns on the outside.
+![.NET 9.0](https://img.shields.io/badge/.NET-9.0-512BD4?style=flat&logo=dotnet&logoColor=white) ![Build Passing](https://img.shields.io/badge/build-passing-brightgreen?style=flat) ![License](https://img.shields.io/badge/license-MIT-blue?style=flat)
 
-🎯 Purpose
+A modern .NET 9 Web API for e-commerce scenarios, organized with **Onion Architecture** to keep domain rules at the center and infrastructure concerns on the outside.
 
-Provide a reference backend covering catalog, basket, order, and payment journeys.
+## 🎯 Purpose
 
-Highlight how Onion Architecture separates core domain logic from application and infrastructure layers.
+* Provide a reference backend covering catalog, basket, order, and payment journeys.
+* Highlight how Onion Architecture separates core domain logic from application and infrastructure layers.
+* Offer a solid foundation for teams extending commerce or marketplace capabilities.
 
-Offer a solid foundation for teams extending commerce or marketplace capabilities.
+## 📁 Project Structure
 
-📁 Project Structure
-
+```text
 ECommerce.sln
 ├── Core
 │   ├── ECommerce.Domain
@@ -22,53 +23,56 @@ ECommerce.sln
 │   └── Presentation
 ├── ECommerce.Web
 └── Shared
+````
 
+## ✨ Main Features
 
-✨ Main Features
+  * **JWT authentication** for secure access control.
+  * **Product catalog** filtering, sorting, and pagination for better discovery.
+  * **Redis-backed shopping basket** for fast, resilient cart experiences.
+  * **Order and payment pipeline** for reliable checkout flows.
+  * **Global exception handling** for consistent error responses.
+  * **Swagger/OpenAPI documentation** for easy API exploration.
 
-JWT authentication for secure access control.
+## 🏗️ Architecture Overview
 
-Product catalog filtering, sorting, and pagination for better discovery.
+  * **Core:** Pure domain concerns—entities, contracts, and specifications with no outward dependencies.
+  * **Infrastructure:** Implements persistence, repositories, seeding, Redis, and external integrations.
+  * **Web:** Hosts the ASP.NET Core pipeline, controllers, middleware, and Swagger UI.
+  * **Shared:** Provides DTOs, pagination helpers, and reusable error models for all layers.
 
-Redis-backed shopping basket for fast, resilient cart experiences.
+## 🚀 Getting Started
 
-Order and payment pipeline for reliable checkout flows.
+1.  **Restore dependencies:**
 
-Global exception handling for consistent error responses.
+    ```bash
+    dotnet restore
+    ```
 
-Swagger/OpenAPI documentation for easy API exploration.
+2.  **Apply migrations in Infrastructure Layer:**
 
-🏗️ Architecture Overview
+    ```bash
+    dotnet ef database update --project Infrastructure/Persistence
+    ```
 
-Core: Pure domain concerns—entities, contracts, and specifications with no outward dependencies.
+3.  **Run the API:**
 
-Infrastructure: Implements persistence, repositories, seeding, Redis, and external integrations.
+    ```bash
+    dotnet run --project ECommerce.Web
+    ```
 
-Web: Hosts the ASP.NET Core pipeline, controllers, middleware, and Swagger UI.
+4.  **Open Swagger UI** at `https://localhost:7034/swagger` to explore endpoints.
 
-Shared: Provides DTOs, pagination helpers, and reusable error models for all layers.
-
-🚀 Getting Started
-
-Restore dependencies:
-
-dotnet restore
-
-
-Apply migrations in Infrastructure Layer:
-
-dotnet ef database update --project Infrastructure/Persistence
-
-
-Run the API:
-
-dotnet run --project ECommerce.Web
-
-
-Open Swagger UI at https://localhost:7034/swagger to explore endpoints.
-
-🤝 Contributing
+## 🤝 Contributing
 
 Contributions are welcome. Please discuss major proposals via issues before submitting pull requests.
 
-Developed by Adham - Source code available at GitHub
+-----
+
+*Developed by **Adham**
+
+```
+
+
+http://googleusercontent.com/immersive_entry_chip/0
+```
