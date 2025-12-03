@@ -69,7 +69,7 @@ Contributions are welcome. Please discuss major proposals via issues before subm
 
 -----
 
-*Developed by **Adham**
+*Developed by **Adham Samaan**
 
 ```
 
